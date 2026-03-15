@@ -1,1 +1,37 @@
 @import "tailwindcss";
+body {
+  background: #0B0B1E;
+  color: white;
+}
+
+body{
+  font-family: 'Space Grotesk', sans-serif;
+  background:#0B0B1E;
+}
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+ .glass-panel {
+    background: hsla(240, 42%, 10%, 0.5);
+    backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid hsla(255, 100%, 62%, 0.1);
+    box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+  }
+
+
+.text-gradient-hero {
+  background: linear-gradient(
+    180deg,
+    #e7e4ff 0%,
+    #c8c2ff 40%,
+    #a59bff 70%,
+    #8d7dff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* navabr */
