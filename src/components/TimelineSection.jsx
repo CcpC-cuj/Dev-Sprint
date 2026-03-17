@@ -9,15 +9,15 @@ const events = [
 ];
 
 const TimelineSection = () => (
-  <section id="timeline" className="relative py-24 md:py-32">
-    <div className="container mx-auto px-4 max-w-4xl">
+  <section id="timeline" className="timeline-section">
+    <div className="container">
 
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-20"
+        className="timeline-header"
       >
         <p className="section-label">Launch Sequence</p>
         <h2 className="section-title">Mission Timeline</h2>
@@ -25,7 +25,6 @@ const TimelineSection = () => (
 
       {/* Timeline */}
       <div className="timeline">
-
         {events.map((event, i) => (
           <motion.div
             key={event.title}
@@ -33,26 +32,18 @@ const TimelineSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`timeline-item ${i % 2 !== 0 ? "reverse" : ""}`}
+            className="timeline-item"
           >
-
-            {/* Node */}
+            {/* Dot */}
             <div className="timeline-dot" />
 
             {/* Card */}
-            <div className="timeline-card card-surface">
-              <h3 className="timeline-title">
-                {event.title}
-              </h3>
-
-              <p className="timeline-date">
-                {event.date}
-              </p>
+            <div className="timeline-card">
+              <h3 className="timeline-title">{event.title}</h3>
+              <p className="timeline-date">{event.date}</p>
             </div>
-
           </motion.div>
         ))}
-
       </div>
     </div>
   </section>

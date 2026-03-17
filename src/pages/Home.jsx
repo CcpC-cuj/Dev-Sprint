@@ -27,9 +27,8 @@ export default function Home() {
       <LeaderboardSection/>
       
       <JudgesSection/>
-      
+  
       <ContactSection/>
-
       <FooterSection />
 
       </div>

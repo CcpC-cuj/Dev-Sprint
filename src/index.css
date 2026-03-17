@@ -325,3 +325,125 @@ html {
   font-size: 0.75rem;
   color: hsl(var(--accent));
 }
+/* Section */
+.timeline-section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+.timeline-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  color: #a855f7;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Thin sharp center vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px; /* thin line */
+  height: 100%;
+  background: #a855f7; /* purple */
+  border-radius: 0; /* sharp edges */
+}
+
+/* Each item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+/* Alternate layout: cards completely off the line */
+.timeline-item:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #a855f7;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Card */
+.timeline-card {
+  width: 45%;
+  padding: 20px;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover glow border */
+.timeline-card:hover {
+  border: 1px solid #a855f7;
+  box-shadow:
+    0 0 10px rgba(168, 85, 247, 0.6),
+    0 0 20px rgba(168, 85, 247, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Cards completely off the line */
+.timeline-item:nth-child(odd) .timeline-card {
+  margin-right: auto;      /* push to left side */
+  margin-left: 0;          
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+  margin-left: auto;       /* push to right side */
+  margin-right: 0;         
+  text-align: left;
+}
+
+/* Text */
+.timeline-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.timeline-date {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 6px;
+}
