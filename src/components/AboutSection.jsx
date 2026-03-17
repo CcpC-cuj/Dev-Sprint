@@ -31,11 +31,6 @@ const AboutSection = () => (
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-<<<<<<< Updated upstream
-        <p className="section-label">MISSION BRIEF</p>
-        <h2 className="text-4xl font-extrabold">ABOUT THE HACKATHON</h2>
-        <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed py-7 font-Rockwell tracking-widest">
-=======
         <p className="section-label">Mission Brief</p>
 
         <h2 className="section-title mb-6">
@@ -43,7 +38,6 @@ const AboutSection = () => (
         </h2>
 
         <p className="section-desc">
->>>>>>> Stashed changes
           Dev Sprint is a 24-hour online web development hackathon where developers collaborate to create innovative solutions for real-world problems. Inspired by the theme "Code Beyond the Horizon", participants will explore new technological frontiers and build creative web applications that push the limits of innovation.
         </p>
       </motion.div>
