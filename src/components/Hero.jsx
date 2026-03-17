@@ -89,9 +89,9 @@ const HeroSection = () => {
         {/* buttons */}
         <div className="flex justify-center gap-4 flex-wrap">
 
-          <button className="px-8 py-3 rounded-lg bg-[#6C3BFF] text-white uppercase tracking-widest text-sm font-semibold transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[2px]">
+       <a href="https://unstop.com/p/dev-sprint-code-crafter-programing-club-1659600" target="_blank" rel="noopener noreferrer"> <button className="px-8 py-3 rounded-lg bg-[#6C3BFF] text-white uppercase tracking-widest text-sm font-semibold transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[2px]">
             Register Now
-          </button>
+          </button></a>
 
           <button
             onClick={() => scrollTo("about")}

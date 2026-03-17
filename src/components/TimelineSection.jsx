@@ -2,8 +2,12 @@ import { motion } from "framer-motion";
 
 const events = [
   { title: "Registration Deadline", date: "20 March 2026 – 10:00 AM" },
+  { title: "Inaguration", date: "21 March 2026 – 12:00 PM" },
   { title: "Hackathon Begins", date: "21 March 2026 – 02:00 PM" },
-  { title: "Development Phase", date: "21 March 2026 – 02:00 PM to 22 March 2026 – 01:00 PM" },
+
+  { title: "Development Phase", date: "21 March 2026 – 01:00 PM to 22 March 2026 – 01:00 PM" },
+  { title: "Assessment Round-1", date: "21 March 2026 – 09:00 PM to 21 March 2026 – 10:00 PM" },
+  { title: "Assessment Round-2", date: "22 March 2026 – 10:00 AM to 22 March 2026 – 11:00 PM" },
   { title: "Submission Deadline", date: "22 March 2026 – 01:00 PM" },
   { title: "Hackathon Ends", date: "22 March 2026 – 02:00 PM" },
 ];
@@ -11,7 +15,6 @@ const events = [
 const TimelineSection = () => (
   <section id="timeline" className="timeline-section">
     <div className="container">
-
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

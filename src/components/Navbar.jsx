@@ -7,7 +7,7 @@ const navItems = [
   "Timeline",
   "Domains",
   "Rules",
-  "Leaderboard",
+  // "Leaderboard",
   "Gallery",
   "Contact",
 ];
@@ -50,11 +50,13 @@ const Navbar = () => {
           ))}
 
           {/* Register Button */}
-          <button
-            className="ml-4 px-5 py-2 rounded-lg bg-[#6C3BFF] text-white text-xs uppercase tracking-widest font-medium transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
-          >
-            Register Now
-          </button>
+          <a href="https://unstop.com/p/dev-sprint-code-crafter-programing-club-1659600" target="_blank" rel="noopener noreferrer">
+            <button
+              className="ml-4 px-5 py-2 rounded-lg bg-[#6C3BFF] text-white text-xs uppercase tracking-widest font-medium transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
+            >
+              Register Now
+            </button>
+          </a>
 
         </div>
 
