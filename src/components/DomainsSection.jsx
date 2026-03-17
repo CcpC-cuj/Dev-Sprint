@@ -54,7 +54,7 @@ const DomainsSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className="section-label mb-3">Target Sectors</p>
+        <p className="section-label">Target Sectors</p>
         <h2 className="section-title">Application Domains</h2>
       </motion.div>
 

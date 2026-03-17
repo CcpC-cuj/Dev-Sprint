@@ -17,7 +17,7 @@ const TimelineSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className="section-label mb-3">Launch Sequence</p>
+        <p className="section-label ">Launch Sequence</p>
         <h2 className="section-title">Mission Timeline</h2>
       </motion.div>
 

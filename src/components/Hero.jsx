@@ -45,7 +45,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-4xl px-6">
 
         {/* label */}
-        <p className="uppercase tracking-[0.35em] text-[#00E5FF] text-xs mb-4 flex items-center justify-center gap-2">
+        <p className="uppercase tracking-[0.2em] text-[#00E5FF] text-xs mb-4 flex items-center justify-center gap-2">
           <Rocket size={14} />
           ONLINE WEB DEVELOPMENT HACKATHON
         </p>

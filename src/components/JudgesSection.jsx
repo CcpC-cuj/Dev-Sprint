@@ -12,7 +12,7 @@ const JudgesSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className="section-label mb-3">Command Crew</p>
+        <p className="section-label">Command Crew</p>
         <h2 className="section-title">Judges Panel</h2>
       </motion.div>
 

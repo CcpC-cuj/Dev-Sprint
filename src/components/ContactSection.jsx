@@ -6,35 +6,38 @@ const ContactSection = () => {
     <section id="contact" className="relative py-24 md:py-32">
       <div className="container mx-auto px-4 max-w-4xl">
 
-        {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <p className="section-label mb-3">Communications</p>
+        {/* Section Heading */}
+                <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="text-center mb-16"
+>
+  <p className="upper-label uppercase tracking-[0.35em] text-[#00E5FF] text-xs mb-4 flex items-center justify-center gap-2">
+            {/* <Rocket size={14} /> */}
+    Communications
+  </p>
 
-  <h2 className="section-title mb-12">
+  <h2 className="font-heading text-3xl md:text-4xl font-semibold uppercase tracking-wide text-foreground">
     Contact Mission Control
   </h2>
-        </motion.div>
+</motion.div>
 
-        {/* Centered Contact Card */}
+        {/* Contact Card */}
         <div className="flex justify-center">
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-surface p-8 w-full max-w-lg flex flex-col justify-center space-y-8"
           >
 
             {/* Email */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Mail size={18} className="text-accent" />
 
               <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+                <div className="text-xs uppercase tracking-widest text-muted-foreground mb-1 font-mono">
                   Email
                 </div>
 
@@ -45,15 +48,15 @@ const ContactSection = () => {
             </div>
 
             {/* Event Type */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Globe size={18} className="text-accent" />
 
               <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+                <div className="text-xs uppercase tracking-widest text-muted-foreground mb-1 font-mono">
                   Event Type
                 </div>
 
-                <div className="text-sm">
+                <div className="text-sm font-mono tracking-wide">
                   Online Hackathon
                 </div>
               </div>

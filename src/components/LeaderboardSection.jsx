@@ -16,7 +16,7 @@ const LeaderboardSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className="section-label mb-3">Rankings</p>
+        <p className="section-label">Rankings</p>
         <h2 className="section-title">Mission Leaderboard</h2>
       </motion.div>
 
