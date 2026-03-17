@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Logo */}
         <button
           onClick={() => scrollTo("home")}
-          className="text-xl font-bold tracking-wide text-white"
+          className="text-xl font-bold tracking-wide text-white cursor-pointer"
         >
           Dev<span className="text-[#6C3BFF]">Sprint</span>
         </button>
@@ -43,7 +43,7 @@ const Navbar = () => {
             <button
               key={item}
               onClick={() => scrollTo(item)}
-              className="text-gray-400 hover:text-[#00E5FF] transition relative"
+              className="text-gray-400 hover:text-[#00E5FF] transition relative cursor-pointer"
             >
               {item}
             </button>
@@ -51,7 +51,7 @@ const Navbar = () => {
 
           {/* Register Button */}
           <button
-            className="ml-4 px-5 py-2 rounded-lg bg-[#6C3BFF] text-white text-xs uppercase tracking-widest font-medium transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[1px]"
+            className="ml-4 px-5 py-2 rounded-lg bg-[#6C3BFF] text-white text-xs uppercase tracking-widest font-medium transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
           >
             Register Now
           </button>
