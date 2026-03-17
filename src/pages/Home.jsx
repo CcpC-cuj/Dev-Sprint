@@ -15,6 +15,7 @@ import FooterSection from "../components/Footer";
 export default function Home() {
   return (
     <>
+    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
       <StarFeild /> 
       
       <Navbar />
@@ -30,6 +31,8 @@ export default function Home() {
       <ContactSection/>
 
       <FooterSection />
+
+      </div>
 
     </>
   );
