@@ -68,11 +68,11 @@ const DomainsSection = () => (
             transition={{ delay: i * 0.08 }}
           >
             <SpotlightCard>
-              <div className="text-accent mb-4">
+              <div className="feature-icon ">
                 <d.icon size={28} />
               </div>
-              <h3 className="font-heading font-semibold mb-2">{d.title}</h3>
-              <p className="text-muted-foreground text-sm">{d.desc}</p>
+              <h3 className="feature-title">{d.title}</h3>
+              <p className="feature-desc">{d.desc}</p>
             </SpotlightCard>
           </motion.div>
         ))}

@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
-import { User } from "lucide-react";
+import { Users, Crown } from "lucide-react";
 
-const judges = [1, 2, 3];
+const judges = [
+  {
+    icon: Users,
+    title: "Student Body",
+    desc: "Participants collectively evaluate and vote on innovative solutions.",
+  },
+  {
+    icon: Crown,
+    title: "President, CCPC",
+    desc: "Acts as the tie-breaker in case of equal scores and final decisions.",
+  },
+];
 
 const JudgesSection = () => (
   <section id="judges" className="relative py-24 md:py-32">
     <div className="container mx-auto px-4">
+
+      {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -13,27 +26,47 @@ const JudgesSection = () => (
         className="text-center mb-16"
       >
         <p className="section-label">Command Crew</p>
-        <h2 className="section-title">Judges Panel</h2>
+        <h2 className="section-title">Judging Panel</h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        {judges.map((_, i) => (
+      {/* Grid */}
+      <div
+        className="features-grid"
+        style={{
+          maxWidth: "700px",
+          margin: "0 auto",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+        }}
+      >
+        {judges.map((j, i) => (
           <motion.div
-            key={i}
+            key={j.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="card-surface p-6 text-center"
+            className="card-surface feature-card"
           >
-            <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <User size={32} className="text-primary" />
+
+            {/* Icon */}
+            <div className="feature-icon">
+              <j.icon size={26} />
             </div>
-            <h3 className="font-heading font-semibold mb-1">To Be Announced</h3>
-            <p className="text-muted-foreground text-xs">Judge details will be announced soon.</p>
+
+            {/* Title */}
+            <h3 className="feature-title">
+              {j.title}
+            </h3>
+
+            {/* Description */}
+            <p className="feature-desc">
+              {j.desc}
+            </p>
+
           </motion.div>
         ))}
       </div>
+
     </div>
   </section>
 );

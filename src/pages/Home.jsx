@@ -5,7 +5,7 @@ import AboutSection from "../components/AboutSection";
 import TimelineSection from "../components/TimelineSection";
 import DomainsSection from "../components/DomainsSection";
 import RulesSection from "../components/RulesSection";
-import LeaderboardSection from "../components/LeaderboardSection";
+// import LeaderboardSection from "../components/LeaderboardSection";
 import JudgesSection from "../components/JudgesSection";
 //import GallerySection from "../components/GallerySection";
 import ContactSection from  "../components/ContactSection";
@@ -24,7 +24,7 @@ export default function Home() {
       <TimelineSection/>
       <DomainsSection/>
       <RulesSection/>
-      <LeaderboardSection/>
+      {/* <LeaderboardSection/> */}
       
       <JudgesSection/>
       
