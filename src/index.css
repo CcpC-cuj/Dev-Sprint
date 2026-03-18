@@ -619,3 +619,26 @@ html {
   color: var(--muted-foreground);
 }
 
+/* 🔥 Smooth minimal scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(108, 59, 255, 0.6);
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 59, 255, 0.9);
+}
+
+/* Firefox */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(108,59,255,0.6) transparent;
+}

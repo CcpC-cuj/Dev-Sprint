@@ -1,6 +1,6 @@
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import {  Linkedin, Instagram } from "lucide-react";
 
-const quickLinks = ["Home", "About", "Timeline", "Rules",];
+const quickLinks = ["Home", "About", "Timeline", "Domains", "Rules"];
 
 const FooterSection = () => {
   const scrollTo = (id) => {
@@ -50,11 +50,23 @@ const FooterSection = () => {
           <div>
             <h4 className="footer-title">Social</h4>
             <div className="footer-social">
-              {[ Linkedin,  Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="social-icon">
-                  <Icon size={16} />
-                </a>
-              ))}
+              <a
+                href="https://www.linkedin.com/company/codecrafterscuj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <Linkedin size={16} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/ccpc_cuj?igsh=MW90MzJ3NmZjeHltbA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <Instagram size={16} />
+              </a>
             </div>
           </div>
         </div>

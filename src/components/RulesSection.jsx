@@ -24,6 +24,24 @@ const ruleDetails = [
   "Only inaugurated participants are eligible.",
   "Proper credit must be given for external resources.",
   "Judges' decisions are final and binding.",
+  "Teams must strictly follow size and leadership requirements.",
+  "All development must be done within the hackathon timeline.",
+  "Submissions must include repository, live demo, and report.",
+  "Once submitted, projects cannot be edited.",
+  "Commit history will be evaluated for contribution.",
+  "Presentation timing will be strictly followed.",
+  "Only inaugurated participants are eligible.",
+  "Proper credit must be given for external resources.",
+  "Judges' decisions are final and binding.",
+  "Teams must strictly follow size and leadership requirements.",
+  "All development must be done within the hackathon timeline.",
+  "Submissions must include repository, live demo, and report.",
+  "Once submitted, projects cannot be edited.",
+  "Commit history will be evaluated for contribution.",
+  "Presentation timing will be strictly followed.",
+  "Only inaugurated participants are eligible.",
+  "Proper credit must be given for external resources.",
+  "Judges' decisions are final and binding.",
 ];
 
 const criteria = [
@@ -47,12 +65,13 @@ const RulesSection = () => {
           <h2 className="section-title">Rules & Judging</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
 
           {/* RULES */}
           <motion.div
             onClick={() => setOpen(true)}
-            className="card-surface p-6 cursor-pointer hover:scale-[1.01] transition"
+            className="card-surface p-6 cursor-pointer hover:scale-[1.01] transition overflow-hidden"
           >
             <h3 className="font-heading text-lg mb-4">
               Mission Parameters
@@ -64,7 +83,11 @@ const RulesSection = () => {
                   key={r}
                   className="flex items-start gap-3 text-sm text-muted-foreground"
                 >
-                 <CheckCircle size={16} className="text-accent mt-0.5 shrink-0" style={{ color: "hsl(185,100%,50%)" }} />
+                  <CheckCircle
+                    size={16}
+                    className="mt-0.5 shrink-0"
+                    style={{ color: "hsl(185,100%,50%)" }}
+                  />
                   <span>{r}</span>
                 </li>
               ))}
@@ -72,12 +95,12 @@ const RulesSection = () => {
           </motion.div>
 
           {/* RADAR */}
-          <motion.div className="card-surface p-6 flex flex-col items-center">
+          <motion.div className="card-surface p-6 flex flex-col items-center overflow-hidden">
             <h3 className="font-heading text-lg mb-6 self-start">
               Evaluation Matrix
             </h3>
 
-            <div className="relative w-[340px] h-[340px]">
+            <div className="relative w-full max-w-[320px] md:max-w-[340px] aspect-square mx-auto">
               <svg viewBox="0 0 200 200" className="w-full h-full">
 
                 {/* Grid */}
@@ -163,41 +186,58 @@ const RulesSection = () => {
         <AnimatePresence>
           {open && (
             <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center"
+              className="fixed inset-0 z-50 flex items-center justify-center px-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
               {/* Overlay */}
               <div
-                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                className="absolute inset-0 bg-black/70 backdrop-blur-md"
                 onClick={() => setOpen(false)}
               />
 
               {/* Modal */}
               <motion.div
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.9 }}
-                className="card-surface p-8 max-w-lg w-full relative"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="relative w-full max-w-3xl max-h-[85vh] overflow-hidden 
+                          rounded-2xl border border-white/10 
+                          bg-white/5 backdrop-blur-xl shadow-2xl"
               >
-                <button
-                  onClick={() => setOpen(false)}
-                  className="absolute top-4 right-4"
-                >
-                  <X size={20} />
-                </button>
 
-                <h3 className="font-heading text-lg mb-4">
-                  Detailed Rules
-                </h3>
+                {/* 🔥 Header (sticky) */}
+                <div className="sticky top-0 z-10 flex items-center justify-between 
+                                px-6 py-4 border-b border-white/10 bg-black/40 backdrop-blur-md">
 
-                <ul className="space-y-3 text-sm text-muted-foreground">
-                  {ruleDetails.map((r, i) => (
-                    <li key={i}>• {r}</li>
-                  ))}
-                </ul>
+                  <h3 className="font-heading text-lg">
+                    Detailed Rules
+                  </h3>
 
+                  <button
+                    onClick={() => setOpen(false)}
+                    className="p-2 rounded-full hover:bg-white/10 transition"
+                  >
+                    <X size={18} />
+                  </button>
+                </div>
+
+                {/* 🔥 Scrollable Content */}
+                <div className="px-6 py-4 overflow-y-auto max-h-[70vh] 
+                                scroll-smooth custom-scroll">
+
+                  <ul className="space-y-4 text-sm text-gray-300 leading-relaxed">
+                    {ruleDetails.map((r, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="text-indigo-400">•</span>
+                        <span>{r}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
               </motion.div>
             </motion.div>
           )}
