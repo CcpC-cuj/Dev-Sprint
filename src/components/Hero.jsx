@@ -65,7 +65,7 @@ const HeroSection = () => {
 
         {/* date */}
         <p className="text-[#00E5FF] font-mono text-sm mb-10">
-          21 March 2026 – 22 March 2026
+          27 March 2026 – 28 March 2026
         </p>
 
         {/* countdown */}
