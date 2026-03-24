@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Rocket, ChevronDown } from "lucide-react";
 
-const targetDate = new Date("2026-03-21T14:00:00").getTime();
+const targetDate = new Date("2026-03-27T20:00:00").getTime();
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({
