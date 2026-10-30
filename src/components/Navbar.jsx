@@ -8,7 +8,7 @@ const navItems = [
   "Timeline",
   "Domains",
   "Rules",
-  // "Leaderboard",
+  "Leaderboard",
   // "Gallery",
   "Contact",
 ];

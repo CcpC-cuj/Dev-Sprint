@@ -1,10 +1,11 @@
-﻿import HeroSection from "../components/Hero";
+import HeroSection from "../components/Hero";
 import Navbar from "../components/Navbar";
 import StarFeild from "../components/StarField";
 import AboutSection from "../components/AboutSection";
 import TimelineSection from "../components/TimelineSection";
 import DomainsSection from "../components/DomainsSection";
 import RulesSection from "../components/RulesSection";
+import LeaderboardSection from "../components/LeaderboardSection";
 import ContactSection from "../components/ContactSection";
 import FooterSection from "../components/Footer";
 
@@ -20,6 +21,7 @@ export default function HomeCopy() {
         <TimelineSection />
         <DomainsSection />
         <RulesSection />
+        <LeaderboardSection />
         <ContactSection />
         <FooterSection />
       </div>
