@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -21,6 +22,11 @@ const Navbar = () => {
       el.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
+  };
+
+  const goToDevSprint = () => {
+    setIsOpen(false);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -53,14 +59,14 @@ const Navbar = () => {
             </button>
           ))}
 
-          {/* Register Button */}
-          <a href="https://unstop.com/p/dev-sprint-code-crafter-programing-club-1659600" target="_blank" rel="noopener noreferrer">
-            <button
-              className="ml-4 px-5 py-2 rounded-lg bg-[#6C3BFF] text-white text-xs uppercase tracking-widest font-medium transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
-            >
-              Register Now
-            </button>
-          </a>
+          {/* DevSprint Page Link (replaces Register Now) */}
+          <Link
+            to="/devsprint"
+            onClick={goToDevSprint}
+            className="ml-4 px-5 py-2 rounded-lg bg-[#6C3BFF] text-white text-xs uppercase tracking-widest font-medium transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
+          >
+            DevSprint
+          </Link>
 
         </div>
 
@@ -88,9 +94,14 @@ const Navbar = () => {
             </button>
           ))}
 
-          <button className="mt-4 w-full py-3 rounded-lg bg-[#6C3BFF] text-white uppercase tracking-widest text-sm">
-            Register Now
-          </button>
+          {/* DevSprint Page Link (replaces Register Now) */}
+          <Link
+            to="/devsprint"
+            onClick={goToDevSprint}
+            className="mt-4 block w-full text-center py-3 rounded-lg bg-[#6C3BFF] text-white uppercase tracking-widest text-sm"
+          >
+            DevSprint
+          </Link>
 
         </div>
       )}

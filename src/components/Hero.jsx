@@ -1,115 +1,53 @@
-import { useEffect, useState } from "react";
-import { Rocket, ChevronDown } from "lucide-react";
+const details = [
+  { label: "Date", value: "30 October 2026" },
+  { label: "Time", value: "2:00 PM – 5:00 PM" },
+  { label: "Venue", value: "Room 327" },
+  { label: "For", value: "1st & 2nd Year Students" },
+];
 
-const targetDate = new Date("2026-03-27T20:00:00").getTime();
-
-const HeroSection = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hrs: 0,
-    min: 0,
-    sec: 0,
-  });
-
-  useEffect(() => {
-    const tick = () => {
-      const now = Date.now();
-      const diff = Math.max(0, targetDate - now);
-
-      setTimeLeft({
-        days: Math.floor(diff / 86400000),
-        hrs: Math.floor((diff % 86400000) / 3600000),
-        min: Math.floor((diff % 3600000) / 60000),
-        sec: Math.floor((diff % 60000) / 1000),
-      });
-    };
-
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
+const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-16 text-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 pb-16"
     >
-      {/* cosmic glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(108,59,255,0.12),transparent_65%)]"></div>
+      <p className="text-xs uppercase tracking-[0.3em] text-[#00E5FF] mb-6">
+        Code Crafter Programming Club Presents
+      </p>
 
-      <div className="relative z-10 max-w-4xl px-6">
+      <h1 className="text-5xl md:text-8xl font-bold leading-tight bg-gradient-to-b from-white to-[#8B6BFF] bg-clip-text text-transparent">
+        Tech Unlocked
+      </h1>
 
-        {/* label */}
-        <p className="uppercase tracking-[0.2em] text-[#00E5FF] text-xs mb-4 flex items-center justify-center gap-2">
-          <Rocket size={14} />
-          ONLINE WEB DEVELOPMENT HACKATHON
-        </p>
+      <p className="mt-6 max-w-2xl text-gray-400 text-base md:text-lg">
+        A beginner-friendly, team-based tech event: solve clues, write prompts,
+        prepare reports and present your ideas. No coding knowledge required.
+      </p>
 
-        {/* title */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[-0.04em] leading-[0.95] mb-6 text-gradient-hero">
-          Code Beyond
-          <br />
-          the Horizon
-        </h1>
-
-        {/* subtitle */}
-        <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base mb-4 opacity-80">
-          Push the boundaries of innovation and build impactful web solutions
-          in a 24-hour coding sprint.
-        </p>
-
-        {/* date */}
-        <p className="text-[#00E5FF] font-mono text-sm mb-10">
-          27 March 2026 – 28 March 2026
-        </p>
-
-        {/* countdown */}
-        <div className="flex justify-center gap-4 mb-10 flex-wrap">
-          {Object.entries(timeLeft).map(([label, value]) => (
-            <div
-              key={label}
-              className="glass-panel rounded-xl px-6 py-4 min-w-[90px]"
-            >
-              <div className="text-3xl font-bold font-mono text-white">
-                {String(value).padStart(2, "0")}
-              </div>
-
-              <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">
-                {label}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* buttons */}
-        <div className="flex justify-center gap-4 flex-wrap">
-
-       <a href="https://unstop.com/p/dev-sprint-code-crafter-programing-club-1659600" target="_blank" rel="noopener noreferrer"> <button className="px-8 py-3 rounded-lg bg-[#6C3BFF] text-white uppercase tracking-widest text-sm font-semibold transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[2px]">
-            Register Now
-          </button></a>
-
-          <button
-            onClick={() => scrollTo("about")}
-            className="px-8 py-3 rounded-lg border border-purple-400/30 text-white uppercase tracking-widest text-sm font-semibold hover:border-purple-400 hover:-translate-y-[2px] transition"
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+        {details.map((d) => (
+          <div
+            key={d.label}
+            className="rounded-xl border border-purple-500/20 bg-[#12122B] px-4 py-5"
           >
-            View Details
-          </button>
-
-        </div>
-
+            <p className="text-[10px] uppercase tracking-widest text-gray-500">
+              {d.label}
+            </p>
+            <p className="mt-2 text-sm font-semibold text-white">{d.value}</p>
+          </div>
+        ))}
       </div>
 
-      {/* scroll indicator */}
-      <div className="absolute bottom-8 animate-bounce">
-        <ChevronDown className="text-gray-400" size={26} />
+      <div className="mt-10 flex flex-wrap gap-4 justify-center">
+        <a
+          href="#timeline"
+          className="px-8 py-3 rounded-lg border border-purple-500/40 text-white text-sm uppercase tracking-widest font-medium transition hover:bg-purple-500/10"
+        >
+          View Schedule
+        </a>
       </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default Hero;

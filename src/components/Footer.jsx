@@ -15,11 +15,11 @@ const FooterSection = () => {
           <div className="col-span-2 md:col-span-1 mb-6 md:mb-0">
             <img 
               src="/logo.png"
-              alt="DevSprint Logo"
+              alt="DevSprint  Logo"
               className="w-20 h-20 object-contain"
             />
             <p className="text-muted-foreground text-xs leading-relaxed tracking-widest">
-              A 24-hour online web development hackathon challenging developers to code beyond the horizon.
+              TECH UNLOCKED is a beginner-friendly, team-based technology event where students solve tech-related clues, create AI-assisted reports, and present innovative solutions.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ const FooterSection = () => {
 
         {/* Bottom */}
         <div className="footer-bottom">
-          © 2026 Dev Sprint Hackathon. All Rights Reserved.
+          © 2026 Tech Unlocked Devsprint 2.0. All Rights Reserved.
         </div>
       </div>
     </footer>

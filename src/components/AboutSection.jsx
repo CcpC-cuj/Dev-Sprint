@@ -1,75 +1,71 @@
-import { motion } from "framer-motion";
-import { Globe, Code, Lightbulb } from "lucide-react";
-
-const features = [
-  {
-    icon: Code,
-    title: "24-Hour Sprint",
-    desc: "Non-stop coding across time zones. Build, iterate, deploy.",
-  },
-  {
-    icon: Globe,
-    title: "Global Teams",
-    desc: "Collaborate with developers, designers, and innovators worldwide.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Real Impact",
-    desc: "Solutions for healthcare, finance, education, agriculture, and beyond.",
-  },
+const objectives = [
+  "Encourage students to collaborate and solve problems as a team.",
+  "Introduce participants to technology concepts in an accessible way.",
+  "Practise writing and improving prompts to create a useful, well-structured report.",
+  "Build confidence in explaining an idea through a short presentation and Q&A.",
 ];
 
-const AboutSection = () => (
-  <section id="about" className="relative py-24 md:py-32">
-    <div className="container mx-auto px-4">
+const outcomes = [
+  "Teamwork",
+  "Technology reasoning",
+  "Prompt writing & refinement",
+  "Critical review of AI output",
+  "Report preparation",
+  "Concise presentation",
+];
 
-      {/* Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-16"
-      >
-        <p className="section-label">Mission Brief</p>
-
-        <h2 className="section-title mb-6">
-          About the Hackathon
+const AboutSection = () => {
+  return (
+    <section id="about" className="relative px-6 py-24">
+      <div className="max-w-6xl mx-auto">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#00E5FF]">About</p>
+        <h2 className="mt-3 text-3xl md:text-5xl font-bold text-white">
+          What is Tech Unlocked?
         </h2>
-
-        <p className="section-desc">
-          Dev Sprint is a 24-hour online web development hackathon where developers collaborate to create innovative solutions for real-world problems. Inspired by the theme "Code Beyond the Horizon", participants will explore new technological frontiers and build creative web applications that push the limits of innovation.
+        <p className="mt-6 max-w-3xl text-gray-400">
+          TECH UNLOCKED is an introductory technology event for first- and
+          second-year students to explore technology through teamwork,
+          problem-solving, prompt writing, report preparation and presentations.
+          Every activity is beginner-friendly. Expected attendance is under 30
+          students, in teams of 3–5.
         </p>
-      </motion.div>
 
-      {/* Features */}
-      <div className="features-grid md:grid-cols-3 gap-6">
-        {features.map((f, i) => (
-          <motion.div
-            key={f.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="card-surface feature-card"
-          >
-            <div className="feature-icon">
-              <f.icon size={24} />
-            </div>
+        <div className="mt-12 grid md:grid-cols-2 gap-8">
+          <div className="rounded-2xl border border-purple-500/20 bg-[#12122B] p-8">
+            <h3 className="text-lg font-semibold text-white">Objectives</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-400">
+              {objectives.map((o) => (
+                <li key={o} className="flex gap-3">
+                  <span className="text-[#00E5FF]">▹</span>
+                  {o}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <h3 className="feature-title">
-              {f.title}
+          <div className="rounded-2xl border border-purple-500/20 bg-[#12122B] p-8">
+            <h3 className="text-lg font-semibold text-white">
+              What you will practise
             </h3>
-
-            <p className="feature-desc">
-              {f.desc}
+            <div className="mt-4 flex flex-wrap gap-3">
+              {outcomes.map((o) => (
+                <span
+                  key={o}
+                  className="px-4 py-2 rounded-full border border-purple-500/30 text-xs text-gray-300"
+                >
+                  {o}
+                </span>
+              ))}
+            </div>
+            <p className="mt-6 text-sm text-gray-400">
+              The event is designed to make technology feel approachable for
+              students who are new to coding.
             </p>
-          </motion.div>
-        ))}
+          </div>
+        </div>
       </div>
-
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default AboutSection;
