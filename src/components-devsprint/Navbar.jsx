@@ -59,13 +59,22 @@ const Navbar = () => {
             </button>
           ))}
 
-          {/* Main Site Link */}
+          {/* DevSprint 3.0 Link */}
           <Link
             to="/"
             onClick={goToMainSite}
+            className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#6C3BFF] to-[#00E5FF] text-white text-xs uppercase tracking-widest font-semibold transition hover:shadow-[0_0_20px_rgba(0,229,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
+          >
+            DevSprint 3.0
+          </Link>
+
+          {/* Tech Unlocked Link */}
+          <Link
+            to="/tech-unlocked"
+            onClick={goToMainSite}
             className="text-gray-400 hover:text-[#00E5FF] transition relative cursor-pointer"
           >
-            Main Site
+            Tech Unlocked
           </Link>
 
           
@@ -96,11 +105,19 @@ const Navbar = () => {
           ))}
 
           <Link
-            to="/"
+            to="/tech-unlocked"
             onClick={goToMainSite}
             className="block w-full text-left py-3 text-sm text-gray-400 hover:text-[#00E5FF] uppercase tracking-widest"
           >
-            Main Site
+            Tech Unlocked
+          </Link>
+
+          <Link
+            to="/"
+            onClick={goToMainSite}
+            className="mt-2 block w-full text-center py-2.5 rounded-lg bg-gradient-to-r from-[#6C3BFF] to-[#00E5FF] text-white uppercase tracking-widest text-sm font-semibold"
+          >
+            DevSprint 3.0
           </Link>
 
           <button className="mt-4 w-full py-3 rounded-lg bg-[#6C3BFF] text-white uppercase tracking-widest text-sm">

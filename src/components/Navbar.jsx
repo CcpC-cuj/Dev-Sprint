@@ -39,11 +39,11 @@ const Navbar = () => {
           onClick={() => scrollTo("home")}
           className="text-xl font-bold tracking-wide text-white cursor-pointer"
         >
-           <img 
-              src="/logo.png"
-              alt="DevSprint Logo"
-              className="w-20 h-20 object-contain"
-            />
+          <img
+            src="/logo.png"
+            alt="DevSprint Logo"
+            className="w-20 h-20 object-contain"
+          />
         </button>
 
         {/* Desktop Menu */}
@@ -59,13 +59,22 @@ const Navbar = () => {
             </button>
           ))}
 
-          {/* DevSprint Page Link (replaces Register Now) */}
+          {/* DevSprint Page Link */}
           <Link
             to="/devsprint"
             onClick={goToDevSprint}
-            className="ml-4 px-5 py-2 rounded-lg bg-[#6C3BFF] text-white text-xs uppercase tracking-widest font-medium transition hover:shadow-[0_0_25px_rgba(108,59,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
+            className="ml-2 px-4 py-2 rounded-lg border border-purple-500/40 text-purple-300 hover:bg-purple-500/10 text-xs uppercase tracking-widest font-medium transition hover:-translate-y-[1px] cursor-pointer"
           >
             DevSprint
+          </Link>
+
+          {/* DevSprint 3.0 Page Link */}
+          <Link
+            to="/"
+            onClick={goToDevSprint}
+            className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#6C3BFF] to-[#00E5FF] text-white text-xs uppercase tracking-widest font-semibold transition hover:shadow-[0_0_25px_rgba(0,229,255,0.6)] hover:-translate-y-[1px] cursor-pointer"
+          >
+            DevSprint 3.0
           </Link>
 
         </div>
@@ -94,13 +103,22 @@ const Navbar = () => {
             </button>
           ))}
 
-          {/* DevSprint Page Link (replaces Register Now) */}
+          {/* DevSprint Page Link */}
           <Link
             to="/devsprint"
             onClick={goToDevSprint}
-            className="mt-4 block w-full text-center py-3 rounded-lg bg-[#6C3BFF] text-white uppercase tracking-widest text-sm"
+            className="mt-4 block w-full text-center py-2.5 rounded-lg border border-purple-500/40 text-purple-300 uppercase tracking-widest text-sm"
           >
             DevSprint
+          </Link>
+
+          {/* DevSprint 3.0 Page Link */}
+          <Link
+            to="/"
+            onClick={goToDevSprint}
+            className="mt-2 block w-full text-center py-2.5 rounded-lg bg-gradient-to-r from-[#6C3BFF] to-[#00E5FF] text-white uppercase tracking-widest text-sm font-semibold"
+          >
+            DevSprint 3.0
           </Link>
 
         </div>
