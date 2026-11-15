@@ -29,7 +29,7 @@ const contactCards = [
     icon: Globe,
     label: "Event Type",
     value: "Offline",
-    subtext: "Virtual mini hackathon participation",
+    subtext: " Mini hackathon participation",
     isLink: false,
   },
 ];

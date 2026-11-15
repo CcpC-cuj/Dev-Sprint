@@ -80,7 +80,7 @@ const HeroSection = () => {
           </span>
           <span className="text-gray-500">•</span>
           <span className="text-xs tracking-wider text-gray-300">
-            CCPC × CSI Collaboration
+            CCPC - Code Crafters Programming Club
           </span>
         </div>
 
