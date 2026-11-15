@@ -128,11 +128,11 @@ const AboutSection = () => {
               </div>
               <div>
                 <p className="text-gray-400 font-mono text-[10px] uppercase">Organizing Bodies</p>
-                <p className="text-[#00E5FF] font-medium">CCPC (Code Crafters) × CSI Student Branch</p>
+                <p className="text-[#00E5FF] font-medium">CCPC (Code Crafters) </p>
               </div>
               <div>
                 <p className="text-gray-400 font-mono text-[10px] uppercase">Event Type</p>
-                <p className="text-[#00E5FF] font-medium">Online Hackathon</p>
+                <p className="text-[#00E5FF] font-medium">Offline Hackathon</p>
               </div>
             </div>
           </div>
