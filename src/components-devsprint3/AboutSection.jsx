@@ -65,7 +65,7 @@ const AboutSection = () => {
           About DevSprint 3.0
         </h2>
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-          The <span className="text-[#00E5FF] font-semibold">Code Crafters Programming Club (CCPC)</span>, in collaboration with the <span className="text-purple-300 font-semibold">Computer Society of India (CSI)</span> at the <span className="text-white font-medium">Department of Computer Science & Engineering, Central University of Jharkhand</span>, presents DevSprint 3.0 under the <span className="text-[#00E5FF] font-semibold">MLH Hack Day</span> initiative on <span className="text-white font-bold">25th November 2026</span>.
+          The <span className="text-[#00E5FF] font-semibold">Code Crafters Programming Club (CCPC)</span>  of the <span className="text-white font-medium">Department of Computer Science & Engineering, Central University of Jharkhand</span>, presents DevSprint 3.0 under the <span className="text-[#00E5FF] font-semibold">MLH Hack Day</span> initiative on <span className="text-white font-bold">25th November 2026</span>.
         </p>
       </motion.div>
 

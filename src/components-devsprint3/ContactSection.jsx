@@ -28,7 +28,7 @@ const contactCards = [
   {
     icon: Globe,
     label: "Event Type",
-    value: "Online",
+    value: "Offline",
     subtext: "Virtual mini hackathon participation",
     isLink: false,
   },
