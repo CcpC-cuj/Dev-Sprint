@@ -48,9 +48,9 @@ const domains = [
   {
     icon: CalendarCheck2,
     title: "Club & Event Discovery Hub",
-    focus: "CCPC, CSI & Campus Activities",
+    focus: "CCPC & Campus Activities",
     description:
-      "Centralized event calendar for CCPC, CSI, and technical clubs, enabling single-click event registration, team matchmaking, and leaderboard showcases.",
+      "Centralized event calendar for CCPC and technical clubs, enabling single-click event registration, team matchmaking, and leaderboard showcases.",
     prompts: [
       "Unified university hackathon & workshop hub",
       "Club membership & attendance passbook",
