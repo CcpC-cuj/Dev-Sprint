@@ -1,8 +1,18 @@
+
 import { useEffect, useState } from "react";
-import { Rocket, Calendar, Clock, MapPin, Users, Sparkles, ChevronDown } from "lucide-react";
+import {
+  Rocket,
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  Sparkles,
+  ChevronDown,
+  ArrowUpRight,
+} from "lucide-react";
 
 // Target event date: 25th November 2026, 09:00 AM IST
-const targetDate = new Date("2026-11-25T09:00:00").getTime();
+const targetDate = new Date("2026-11-25T09:00:00+05:30").getTime();
 
 const quickSpecs = [
   {
@@ -72,13 +82,17 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#00E5FF]/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl px-4 sm:px-6 mx-auto">
+
         {/* Organizer & Affiliation Badges */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-[#12122B]/90 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(108,59,255,0.2)]">
           <Rocket size={14} className="text-[#00E5FF]" />
+
           <span className="text-xs uppercase tracking-widest text-[#00E5FF] font-mono">
             MLH Hack Day Initiative
           </span>
+
           <span className="text-gray-500">•</span>
+
           <span className="text-xs tracking-wider text-gray-300">
             CCPC - Code Crafters Programming Club
           </span>
@@ -98,7 +112,12 @@ const HeroSection = () => {
 
         {/* Core Subtitle / Description */}
         <p className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg mb-8 leading-relaxed font-sans">
-          A one-day offline mini hackathon focusing on <span className="text-[#00E5FF] font-medium">prompt-to-code development</span>. Use AI-assisted coding tools and modern technologies to transform real problems and natural prompts into functional software prototypes.
+          A one-day offline mini hackathon focusing on{" "}
+          <span className="text-[#00E5FF] font-medium">
+            prompt-to-code development
+          </span>
+          . Use AI-assisted coding tools and modern technologies to transform
+          real problems and natural prompts into functional software prototypes.
         </p>
 
         {/* Countdown Timer */}
@@ -106,6 +125,7 @@ const HeroSection = () => {
           <p className="text-[11px] font-mono uppercase tracking-[0.25em] text-gray-400 mb-3">
             Hacking Commences In
           </p>
+
           <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
             {Object.entries(timeLeft).map(([label, value]) => (
               <div
@@ -115,6 +135,7 @@ const HeroSection = () => {
                 <div className="text-2xl sm:text-4xl font-extrabold font-mono text-white">
                   {String(value).padStart(2, "0")}
                 </div>
+
                 <div className="text-[10px] sm:text-xs text-[#00E5FF] uppercase tracking-widest mt-1 font-mono">
                   {label}
                 </div>
@@ -124,7 +145,24 @@ const HeroSection = () => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-center gap-4 flex-wrap mb-14">
+        <div className="flex justify-center items-center gap-4 flex-wrap mb-14">
+
+          {/* Register Now - Primary CTA */}
+          <a
+            href="https://events.mlh.com/events/15846-devsprint-3-0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-9 py-4 rounded-xl bg-gradient-to-r from-[#FF3D81] via-[#A855F7] to-[#6C3BFF] text-white uppercase tracking-widest text-sm font-extrabold shadow-[0_0_30px_rgba(255,61,129,0.5)] hover:shadow-[0_0_45px_rgba(168,85,247,0.8)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer flex items-center gap-3 border border-white/20"
+          >
+            <Rocket size={18} className="group-hover:rotate-12 transition-transform" />
+            REGISTER NOW
+            <ArrowUpRight
+              size={17}
+              className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+            />
+          </a>
+
+          {/* Explore Timeline */}
           <button
             onClick={() => scrollTo("timeline")}
             className="px-7 py-3 rounded-xl bg-gradient-to-r from-[#6C3BFF] to-[#00E5FF] text-white uppercase tracking-widest text-xs font-semibold shadow-[0_0_25px_rgba(108,59,255,0.5)] hover:shadow-[0_0_30px_rgba(0,229,255,0.7)] hover:-translate-y-[2px] transition cursor-pointer flex items-center gap-2"
@@ -132,18 +170,23 @@ const HeroSection = () => {
             <Sparkles size={15} />
             Explore Timeline
           </button>
+
+          {/* Event Brief */}
           <button
             onClick={() => scrollTo("about")}
             className="px-7 py-3 rounded-xl border border-purple-500/40 text-gray-200 uppercase tracking-widest text-xs font-semibold hover:border-[#00E5FF] hover:bg-purple-500/10 hover:-translate-y-[2px] transition cursor-pointer"
           >
             Event Brief
           </button>
+
+          {/* Judging Criteria */}
           <button
             onClick={() => scrollTo("criteria")}
             className="px-7 py-3 rounded-xl border border-purple-500/40 text-gray-200 uppercase tracking-widest text-xs font-semibold hover:border-[#00E5FF] hover:bg-purple-500/10 hover:-translate-y-[2px] transition cursor-pointer"
           >
             Judging Criteria
           </button>
+
         </div>
 
         {/* 4 Key Event Highlights Grid */}
@@ -156,12 +199,15 @@ const HeroSection = () => {
               <div className="w-8 h-8 rounded-lg bg-purple-500/10 text-[#00E5FF] flex items-center justify-center mb-3">
                 <item.icon size={16} />
               </div>
+
               <p className="text-[10px] uppercase font-mono tracking-widest text-gray-400">
                 {item.label}
               </p>
+
               <p className="text-sm font-semibold text-white mt-1">
                 {item.value}
               </p>
+
               <p className="text-xs text-purple-300/80 mt-0.5">
                 {item.sub}
               </p>
